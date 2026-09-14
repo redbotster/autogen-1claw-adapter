@@ -104,6 +104,7 @@ The interface is intentionally narrow — three methods (`submit_intent`, `get_p
 - `src/autogen_1claw/tool.py` — `VaultBackedTool` (callable shape compatible with `ConversableAgent.register_for_llm`)
 - `src/autogen_1claw/middleware.py` — `VaultMiddleware` for whole-agent enforcement
 - `examples/billing_agent.py` — end-to-end demo (happy path, agent-mismatch denial, cap denial, audit log)
+- `examples/tier2_live_agent_demo.py` — a real `AssistantAgent` (Claude Haiku) driving a multi-turn conversation through the vault, including an adversarial prompt asking it to leak the credential, plus a live check of the `allowed_agents` identity gate. See [`INTEGRATION_VERIFIED.md`](./INTEGRATION_VERIFIED.md#tier-2--live-agent-adversarial-prompt-and-the-allowed_agents-identity-gate) for the full transcript and result.
 - `tests/` — 10 sanity tests covering each policy enforcement point
 
 ## Roadmap
